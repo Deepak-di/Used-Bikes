@@ -1,0 +1,46 @@
+{%extends 'base.html'%}
+{%load static%}
+
+
+
+
+
+{%block main_block%}
+{%for bi in data%}
+<div class="d-flex justify-content-center mt-3">
+<div class="card mb-3 bg-dark d-flex mb-5" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{bi.Bikes_object.image.url}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <div class="d-flex justify-content-between">
+          <h5 class="card-title text-primary">{{bi.Bikes_object.brand_object}}</h5>
+          <h5 class="card-title text-primary">$ {{bi.Bikes_object.price}}</h5>
+        </div>
+
+          <h6 class="card-title text-white">{{bi.Bikes_object}}</h6>
+
+        <p class="card-text text-fadein">{{bi.Bikes_object.description}}</p>
+        <hr>
+
+       <div class="d-flex justify-content-between">
+        <button><a href="{%url 'book'%}">Book Your Slot</a></button>
+        <button class="bg-primary "><a href="{%url 'wishlist-remove' bi.id%}" class="text-white">remove</a></button>
+       </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{%endfor%}
+
+
+{%endblock%}
+
+
+
