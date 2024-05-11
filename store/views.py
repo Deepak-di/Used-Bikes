@@ -96,6 +96,7 @@ class SlotBooking(View):
     def post(self,request,*args,**kwargs):
         email=request.POST.get("email")
         phone=request.POST.get("phone")
+        
 
         Order.objects.create(
             user_object=request.user,
