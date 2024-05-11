@@ -104,18 +104,4 @@ class SlotBooking(View):
             phone=phone
         )
         return redirect("index")
-        # favourite_objects=request.user.cart.cartitem
-        # for b in favourite_objects:
-        #     OrderItems.objects.create(
-        #         order_object=booked_obj,
-        #         basket_item_object=b,
-        #     )
-            
-
-        # id=kwargs.get("pk")
-        # car_obj=FavouriteItem.objects.get(id=id)
-        # OrderItems.objects.create(
-        #     order_object=booked_obj,
-        #     basket_item_object=car_obj
-
-        # )
+       
